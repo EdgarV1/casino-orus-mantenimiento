@@ -4,9 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema de Mantenimiento - Casino Orus</title>
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
+    <div class="contenedor">
     <h1>Casino Orus - Registro de Incidencias</h1>
     <p>Bienvenido al sistema de mantenimiento.</p>
+    <form action="/incidencia" method="post">
+       
+        <label for="terminal">Terminal:</label>
+        <input type="text" id="terminal" name="terminal" placeholder="Número de terminal">
+
+        <label for="falla">Falla:</label>
+        <textarea id="falla" name="falla" placeholder="Descripción de la falla"></textarea>
+        
+        <label for="evidencia">Foto de la falla (opcional):</label> 
+        <input type="file" id="evidencia" name="evidencia" accept="image/*">
+
+        <button type="submit">Registrar Incidencia</button>
+    </form>
+    </div>
 </body>
 </html>

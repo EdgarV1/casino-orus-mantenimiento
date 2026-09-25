@@ -1,0 +1,99 @@
+/* 1. RESET: Limpiamos los márgenes invisibles que los navegadores ponen por defecto */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente moderna y profesional */
+}
+
+/* 2. PANTALLA COMPLETA (BODY): Un fondo gris suave para que no canse la vista en el turno */
+body {
+    background-color: #fafcfb;
+    color: #333;
+    padding: 2rem; /* Da un respiro alrededor de toda la pantalla */
+}
+
+/* 3. LA CAJA PRINCIPAL (.contenedor): Aquí agrupamos el formulario para centrarlo */
+.contenedor {
+    background-color: #ffffff;
+    max-width: 500px; /* Evita que el formulario se estire a lo ancho en monitores grandes */
+    margin: 0 auto; /* TRUCO MAGICO: "auto" a los lados centra la caja horizontalmente */
+    padding: 2rem; /* Espacio interno entre el borde blanco y los textos */
+    border-radius: 8px; /* Suaviza las esquinas */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Crea un efecto de tarjeta flotante */
+}
+
+/* 4. TÍTULOS Y ETIQUETAS: Damos jerarquía visual */
+h1 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #666; /* Un gris más claro para subtítulos */
+}
+
+label {
+    font-weight: bold;
+    display: block; /* Obliga a la etiqueta a ocupar su propia línea superior */
+    margin-bottom: 5px;
+}
+
+/* 5. CAJAS DE TEXTO (INPUTS): Diseño limpio para que sea fácil escribir */
+input, textarea {
+    width: 100%; /* Ocupan todo el ancho disponible de la tarjeta blanca */
+    padding: 10px;
+    margin-bottom: 15px; /* Separación hacia abajo con el siguiente elemento */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+/* 7. ESTILO PARA EL BOTÓN DE SUBIR ARCHIVO */
+input[type="file"] {
+    /* Quitamos el borde sólido típico de los textos */
+    border: 1px dashed #0056b3; 
+    /* Le damos un color de fondo sutil para que destaque */
+    background-color: #f8f9fa;
+    /* Ajustamos el espacio interno */
+    padding: 15px;
+    cursor: pointer;
+}
+
+/* Modificamos el aspecto del botón interno que dice "Seleccionar archivo" */
+input[type="file"]::file-selector-button {
+    background-color: #e9ecef;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    border-radius: 4px;
+    margin-right: 15px; /* Separa el botón del texto del nombre del archivo */
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s; /* Efecto suave al pasar el mouse */
+}
+
+input[type="file"]::file-selector-button:hover {
+    background-color: #d3d9df;
+}
+
+/* 6. EL BOTÓN DE ACCIÓN: Debe destacar para el usuario */
+button {
+    background-color: #0056b3; /* Azul corporativo */
+    color: white;
+    border: none; /* Quitamos el borde feo por defecto */
+    padding: 12px;
+    width: 100%;
+    border-radius: 4px;
+    cursor: pointer; /* Cambia la flecha del mouse por una manita */
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* PSEUDO-CLASE HOVER: El efecto interactivo al pasar el mouse por encima */
+button:hover {
+    background-color: #004494; /* Oscurece el azul */
+}
